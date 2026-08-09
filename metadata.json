@@ -1,0 +1,6 @@
+{
+  "name": "Civil Jungles Construction Cost Estimator",
+  "description": "Detailed construction cost calculator with phase planning, material quantities from plot clearance to electrical switchboards, and labour cost breakdown for civiljungles.com.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
