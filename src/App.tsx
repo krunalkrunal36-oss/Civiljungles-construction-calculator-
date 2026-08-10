@@ -29,6 +29,7 @@ import { RateCustomizerModal } from "./components/RateCustomizerModal";
 import { AIAdvisorModal } from "./components/AIAdvisorModal";
 import { ProjectCompareModal } from "./components/ProjectCompareModal";
 import { PrintReportView } from "./components/PrintReportView";
+import { AdSlot } from "./components/AdSlot";
 
 import {
   Layers,
@@ -175,6 +176,9 @@ export default function App() {
       {/* Main Container */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-3 sm:px-6 lg:px-8 py-4 sm:py-6 space-y-5 overflow-x-hidden">
         
+        {/* Ad Placement 1: Top Header Banner */}
+        <AdSlot location="top-header" labelEn="Top Header Leaderboard Banner Ad" />
+
         {/* Saved Estimates Banner Bar */}
         {savedProjects.length > 0 && (
           <div className="bg-white border-2 border-slate-900 shadow-[2px_2px_0px_0px_#0F172A] px-4 py-2.5 flex items-center justify-between text-xs font-bold text-slate-900">
@@ -209,6 +213,9 @@ export default function App() {
           currency={currency}
           language={language}
         />
+
+        {/* Ad Placement 2: Mid-Content Banner */}
+        <AdSlot location="mid-content" labelEn="Mid-Page Content Banner Ad" />
 
         {/* 3. Section Navigation Tabs */}
         <div className="bg-white p-3 sm:p-4 border-2 border-slate-900 shadow-[4px_4px_0px_0px_#0F172A] space-y-3 text-slate-900">
@@ -486,7 +493,13 @@ export default function App() {
           />
         )}
 
+        {/* Ad Placement 3: Bottom of Active Calculator Module */}
+        <AdSlot location="calculator-bottom" labelEn="Calculator Results Banner Ad" />
+
       </main>
+
+      {/* Ad Placement 4: Above Footer Sticky/Anchor Ad */}
+      <AdSlot location="bottom-sticky" labelEn="Bottom Anchor Mobile Ad" />
 
       {/* Footer */}
       <footer className="border-t-2 border-slate-900 bg-white py-6 px-4 text-center text-xs text-slate-700 space-y-2 font-bold">
