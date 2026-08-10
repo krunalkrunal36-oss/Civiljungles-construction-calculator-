@@ -36,27 +36,31 @@ export const AdSlot: React.FC<AdSlotProps> = ({
 
   const env = (import.meta as any).env || {};
 
+  // Civil Jungles AdSense Publisher ID & Default Ad Slot ID
+  const DEFAULT_CLIENT_ID = "ca-pub-9616095780084968";
+  const DEFAULT_SLOT_ID = "9287959002";
+
   // Environment variable fallback
   const finalClientId =
     clientId ||
     (env.VITE_GOOGLE_ADSENSE_CLIENT_ID as string) ||
-    "";
+    DEFAULT_CLIENT_ID;
 
   const getEnvSlot = () => {
     if (slotId) return slotId;
     switch (location) {
       case "top-header":
-        return (env.VITE_ADSENSE_SLOT_TOP as string) || "1234567890";
+        return (env.VITE_ADSENSE_SLOT_TOP as string) || DEFAULT_SLOT_ID;
       case "mid-content":
-        return (env.VITE_ADSENSE_SLOT_MID as string) || "2345678901";
+        return (env.VITE_ADSENSE_SLOT_MID as string) || DEFAULT_SLOT_ID;
       case "sidebar-rect":
-        return (env.VITE_ADSENSE_SLOT_SIDEBAR as string) || "3456789012";
+        return (env.VITE_ADSENSE_SLOT_SIDEBAR as string) || DEFAULT_SLOT_ID;
       case "calculator-bottom":
-        return (env.VITE_ADSENSE_SLOT_CALCULATOR as string) || "4567890123";
+        return (env.VITE_ADSENSE_SLOT_CALCULATOR as string) || DEFAULT_SLOT_ID;
       case "bottom-sticky":
-        return (env.VITE_ADSENSE_SLOT_BOTTOM as string) || "5678901234";
+        return (env.VITE_ADSENSE_SLOT_BOTTOM as string) || DEFAULT_SLOT_ID;
       default:
-        return "0000000000";
+        return DEFAULT_SLOT_ID;
     }
   };
 
